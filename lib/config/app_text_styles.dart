@@ -9,7 +9,7 @@ class AppTextStyles {
   );
 
   dynamic appFonts = GoogleFonts.montserrat(
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: FontWeight.w700,
   );
 
@@ -21,7 +21,7 @@ class AppTextStyles {
   dynamic appFontsLabelsWhite = GoogleFonts.montserrat(
     fontSize: 16,
     fontWeight: FontWeight.w700,
-    color: Colors.red,
+    color: Colors.black,
   );
 
   dynamic appFontsLabelsWhitePure = GoogleFonts.montserrat(

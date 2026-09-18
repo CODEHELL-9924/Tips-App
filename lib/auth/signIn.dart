@@ -36,6 +36,7 @@ class _SigninState extends State<Signin> {
                 ),
               ),
             ),
+            SizedBox(height: 2),
 
             TextFormField(
               decoration: InputDecoration(
@@ -46,6 +47,7 @@ class _SigninState extends State<Signin> {
                 ),
               ),
             ),
+            SizedBox(height: 2),
 
             TextFormField(
               decoration: InputDecoration(
@@ -59,6 +61,7 @@ class _SigninState extends State<Signin> {
                 ),
               ),
             ),
+            SizedBox(height: 1),
 
             InkWell(
               onTap: () {

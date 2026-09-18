@@ -15,7 +15,6 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -45,6 +44,22 @@ class _LoginState extends State<Login> {
                 ),
               ),
             ),
+            SizedBox(height: 6),
+            // .....
+
+            TextFormField(
+              decoration: InputDecoration(
+                label: Text(
+                  "Confirm Password",
+                  style: AppTextStyles.appFontsLabels,
+                ),
+                prefixIcon: Icon(Icons.lock_open_sharp),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+            ),
+            SizedBox(height: 1),
 
             InkWell(
               onTap: () {
