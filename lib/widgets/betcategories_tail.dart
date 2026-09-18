@@ -9,24 +9,29 @@ class BetcategoriesTail extends StatefulWidget {
 }
 
 class _BetcategoriesTailState extends State<BetcategoriesTail> {
-  final List imageUrl = ['images/betway.png', 'images/Hela-Bet-logo.png', 'images/images.jpg', 'images/unamed.webp'];
+  final List imageUrl = [
+    'images/betway.png',
+    'images/Hela-Bet-logo.png',
+    'images/images.jpg',
+    'images/unamed.webp',
+  ];
 
-  final List tittle = ['100+ Odds'];
-
-  final List time = [Duration(hours: 2)];
+  final List tittle = ['100+ Odds', '10 oddds', '6.07 Odds', '9 Odds'];
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: imageUrl.length,
-      scrollDirection: Axis.horizontal,
-      itemBuilder: (context, index) {
-        return BetsCategories(
-          imageUrl: imageUrl[index],
-          tittle: tittle[index],
-          time: 'index',
-        );
-      },
+    return SizedBox(
+      height: 200,
+      child: ListView.builder(
+        itemCount: imageUrl.length,
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (context, index) {
+          return BetsCategories(
+            imageUrl: imageUrl[index],
+            tittle: tittle[index],
+          );
+        },
+      ),
     );
   }
 }

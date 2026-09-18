@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
 class BetsCategories extends StatelessWidget {
-  final String imageUrl, tittle, time;
+  final String imageUrl, tittle;
   const BetsCategories({
     super.key,
     required this.imageUrl,
     required this.tittle,
-    required this.time,
   });
 
   @override
