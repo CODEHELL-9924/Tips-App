@@ -2,6 +2,6 @@ import 'package:flutter/material.dart';
 
 class AppColorThemes {
   dynamic buttonColor = Color(0XFFFF9601);
-  dynamic iconColor = Color(0XFFB8892D);
-  dynamic containers = Color(0XFFF5EBDD);
+  dynamic iconColor = Color(0XFF625A71);
+  dynamic containers = Color(0XFFFCF2E5);
 }

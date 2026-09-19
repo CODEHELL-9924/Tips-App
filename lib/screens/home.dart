@@ -1,11 +1,10 @@
+import 'package:calender_picker/calender_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:masterpes_app/config/app_color_themes.dart';
 import 'package:masterpes_app/config/app_text_styles.dart';
 import 'package:masterpes_app/screens/bets.dart';
 import 'package:masterpes_app/widgets/betcategories_tail.dart';
-import 'package:masterpes_app/widgets/bets_categories.dart';
 import 'package:masterpes_app/widgets/homecategories_tail.dart';
-import 'package:slide_countdown/slide_countdown.dart';
 
 class Home extends StatelessWidget {
   const new({super.key});
@@ -83,6 +82,13 @@ class Home extends StatelessWidget {
                 ],
               ),
               // ........
+              CalendarPicker(
+                style: CalendarStyle.material3(),
+                selectionMode: CalendarSelectionMode.single,
+                onDateSelected: (date) {
+                  print('Selected: $date');
+                },
+              ),
 
               BetcategoriesTail(),
             ],

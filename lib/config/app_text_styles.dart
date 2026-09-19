@@ -10,22 +10,28 @@ class AppTextStyles {
 
   dynamic appFonts = GoogleFonts.montserrat(
     fontSize: 24,
-    fontWeight: FontWeight.w700,
+    fontWeight: FontWeight.w600,
   );
 
   static TextStyle appFontsLabels = GoogleFonts.montserrat(
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: FontWeight.w500,
   );
 
   dynamic appFontsLabelsWhite = GoogleFonts.montserrat(
-    fontSize: 16,
+    fontSize: 20,
+    fontWeight: FontWeight.w700,
+    color: Colors.black,
+  );
+
+  dynamic containerTittle = GoogleFonts.montserrat(
+    fontSize: 18,
     fontWeight: FontWeight.w700,
     color: Colors.black,
   );
 
   dynamic appFontsLabelsWhitePure = GoogleFonts.montserrat(
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: FontWeight.w700,
     color: Colors.green,
   );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:masterpes_app/config/app_color_themes.dart';
 import 'package:masterpes_app/config/app_text_styles.dart';
 
@@ -16,7 +17,7 @@ class BetsCategories extends StatelessWidget {
     return Container(
       margin: EdgeInsets.all(10),
       height: MediaQuery.of(context).size.height * 0.19,
-      width: MediaQuery.of(context).size.height / 4,
+      width: MediaQuery.of(context).size.height / 3.8,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
         color: AppColorThemes().containers,
@@ -28,14 +29,60 @@ class BetsCategories extends StatelessWidget {
           spacing: 6,
           children: [
             Text(tittle, style: AppTextStyles().appFonts),
-            Row(
-              children: [
-                Text(bookingCodes, style: AppTextStyles().appFontsLabelsWhite),
-                Text(odds, style: AppTextStyles().appFontsLabelsWhitePure),
-              ],
+            Padding(
+              padding: const EdgeInsets.only(top: 7, bottom: 5),
+              child: Row(
+                children: [
+                  Row(
+                    spacing: -10,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SelectableText(
+                        bookingCodes,
+                        style: AppTextStyles().appFontsLabelsWhite,
+                      ),
+
+                      IconButton(
+                        icon: const Icon(Icons.copy, size: 18),
+                        onPressed: () {
+                          Clipboard.setData(ClipboardData(text: bookingCodes));
+
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text('Booking code copied!'),
+                            ),
+                          );
+                        },
+                      ),
+                    ],
+                  ),
+                  // ......
+                  Spacer(),
+                  Text(odds, style: AppTextStyles().appFontsLabelsWhitePure),
+                ],
+              ),
             ),
 
-            ElevatedButton(onPressed: () {}, child: Text("Book Now")),
+            InkWell(
+              onTap: () {
+                print("Tapped");
+              },
+              child: Container(
+                width: double.infinity,
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: AppColorThemes().iconColor,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Book Now", style: AppTextStyles().appFonts),
+                    Icon(Icons.shopping_cart_outlined),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
