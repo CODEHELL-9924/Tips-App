@@ -27,6 +27,6 @@ class AppTextStyles {
   dynamic appFontsLabelsWhitePure = GoogleFonts.montserrat(
     fontSize: 16,
     fontWeight: FontWeight.w700,
-    color: Colors.white,
+    color: Colors.green,
   );
 }

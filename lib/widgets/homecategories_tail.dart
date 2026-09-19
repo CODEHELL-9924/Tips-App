@@ -15,7 +15,7 @@ class _HomecategoriesTailState extends State<HomecategoriesTail> {
     'BetWay',
     'HelaBet',
     '1-win',
-    'Mo-Bet',
+    '1X-Bet',
   ];
 
   @override

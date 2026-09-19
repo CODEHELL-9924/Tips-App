@@ -38,7 +38,10 @@ class Home extends StatelessWidget {
             children: [
               TextFormField(
                 decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.search),
+                  suffixIcon: IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.search),
+                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(118),
                   ),
