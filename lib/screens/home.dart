@@ -1,9 +1,9 @@
 import 'package:calender_picker/calender_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_image_carousel_slider/asset_image_carousel_slider.dart';
 import 'package:masterpes_app/config/app_color_themes.dart';
 import 'package:masterpes_app/config/app_text_styles.dart';
 import 'package:masterpes_app/screens/bets.dart';
-import 'package:masterpes_app/widgets/betcategories_tail.dart';
 import 'package:masterpes_app/widgets/homecategories_tail.dart';
 
 class Home extends StatelessWidget {
@@ -57,11 +57,6 @@ class Home extends StatelessWidget {
                 ),
               ),
               // ....
-              Text("Categories", style: AppTextStyles().appFonts),
-              // ...
-
-              HomecategoriesTail(),
-              // ........
 
               Row(
                 children: [
@@ -74,10 +69,7 @@ class Home extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => Bets()),
                       );
                     },
-                    child: Text(
-                      "See All",
-                      style: AppTextStyles().appFontsLabelsWhite,
-                    ),
+                    child: Text("See All", style: AppTextStyles().textIcon),
                   ),
                 ],
               ),
@@ -90,7 +82,7 @@ class Home extends StatelessWidget {
                 },
               ),
 
-              // BetcategoriesTail(),
+              // BetsCategoriesTail(),
             ],
           ),
         ),

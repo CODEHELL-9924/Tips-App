@@ -10,18 +10,18 @@ class HomecategoriesTail extends StatefulWidget {
 
 class _HomecategoriesTailState extends State<HomecategoriesTail> {
   final List label = [
-    'Sporty Bet',
-    'BetPawa',
-    'BetWay',
-    'HelaBet',
-    '1-win',
-    '1X-Bet',
+    'All',
+    'Appartment',
+    'Single Room',
+    'Master Room',
+    'Full House',
+    'Others',
   ];
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.075,
+      height: MediaQuery.of(context).size.height * 0.085,
       child: ListView.builder(
         itemCount: label.length,
         scrollDirection: Axis.horizontal,

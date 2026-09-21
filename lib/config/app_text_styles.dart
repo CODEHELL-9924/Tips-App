@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:masterpes_app/config/app_color_themes.dart';
 
 class AppTextStyles {
   static TextStyle appTittle = GoogleFonts.poppins(
@@ -14,7 +15,7 @@ class AppTextStyles {
   );
 
   static TextStyle appFontsLabels = GoogleFonts.montserrat(
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: FontWeight.w500,
   );
 
@@ -24,15 +25,20 @@ class AppTextStyles {
     color: Colors.black,
   );
 
-  dynamic containerTittle = GoogleFonts.montserrat(
-    fontSize: 18,
+  dynamic textIcon = GoogleFonts.montserrat(
+    fontSize: 17,
     fontWeight: FontWeight.w700,
+    color: AppColorThemes().buttonColor,
+  );
+  dynamic containerTittle = GoogleFonts.montserrat(
+    fontSize: 16,
+    fontWeight: FontWeight.w600,
     color: Colors.black,
   );
 
-  dynamic appFontsLabelsWhitePure = GoogleFonts.montserrat(
-    fontSize: 14,
+  dynamic iconic = GoogleFonts.montserrat(
+    fontSize: 12,
     fontWeight: FontWeight.w700,
-    color: Colors.green,
+    color: Colors.black,
   );
 }
