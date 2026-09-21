@@ -1,10 +1,10 @@
 import 'package:calender_picker/calender_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_image_carousel_slider/asset_image_carousel_slider.dart';
+import 'package:flutter_image_slider/carousel.dart';
 import 'package:masterpes_app/config/app_color_themes.dart';
 import 'package:masterpes_app/config/app_text_styles.dart';
 import 'package:masterpes_app/screens/bets.dart';
-import 'package:masterpes_app/widgets/homecategories_tail.dart';
+import 'package:masterpes_app/widgets/home_cards_tail.dart';
 
 class Home extends StatelessWidget {
   const new({super.key});
@@ -48,13 +48,50 @@ class Home extends StatelessWidget {
                 ),
               ),
               // ....
-              Container(
-                height: MediaQuery.of(context).size.height * 0.28,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  color: Colors.amber,
-                ),
+              Carousel(
+                indicatorBarColor: Colors.transparent,
+                activateIndicatorColor: Colors.orange,
+                height: MediaQuery.of(context).size.height * 0.3,
+                // animationPageDuration: Duration(milliseconds: 10),
+                autoScroll: true,
+                // widgets
+                items: [
+                  Container(
+                    height: MediaQuery.of(context).size.height,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage('images/images.jpg'),
+                      ),
+                    ),
+                  ),
+                  // ..
+                  Container(
+                    height: MediaQuery.of(context).size.height,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage('images/betway.png'),
+                      ),
+                    ),
+                  ),
+                  // .....
+                  Container(
+                    height: MediaQuery.of(context).size.height,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage('images/unnamed.webp'),
+                      ),
+                    ),
+                  ),
+                ],
               ),
               // ....
 
@@ -82,7 +119,7 @@ class Home extends StatelessWidget {
                 },
               ),
 
-              // BetsCategoriesTail(),
+              HomeCardsTail(),
             ],
           ),
         ),

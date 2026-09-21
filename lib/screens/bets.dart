@@ -71,12 +71,32 @@ class Bets extends StatelessWidget {
                             ),
                           ],
                         ),
-                        Row(
-                          children: [
-                            Container(
-                              alignment: Alignment.bottomRight,
-                              child: Transform.scale(
-                                scale: 1.2,
+                        Padding(
+                          padding: const EdgeInsets.only(right: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                padding: EdgeInsets.all(5),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(16),
+                                  color: AppColorThemes().buttonColor,
+                                ),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  spacing: 10,
+                                  children: [
+                                    Text(
+                                      "Copy Code",
+                                      style: AppTextStyles().appFonts,
+                                    ),
+                                    Icon(Icons.copy_rounded),
+                                  ],
+                                ),
+                              ),
+                              // ..........
+                              Transform.scale(
+                                scale: 1.3,
                                 child: SlideCountdown(
                                   decoration: BoxDecoration(
                                     color: Colors.black.withAlpha(60),
@@ -85,27 +105,8 @@ class Bets extends StatelessWidget {
                                   duration: Duration(hours: 3),
                                 ),
                               ),
-                            ),
-                            Container(
-                              height: MediaQuery.of(context).size.height * 0.06,
-                              // width: double.infinity,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(16),
-                                color: AppColorThemes().buttonColor,
-                              ),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                spacing: 10,
-                                children: [
-                                  Text(
-                                    "Copy Code",
-                                    style: AppTextStyles().appFonts,
-                                  ),
-                                  Icon(Icons.copy_rounded),
-                                ],
-                              ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ],
                     ),
