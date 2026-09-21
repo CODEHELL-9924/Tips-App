@@ -21,7 +21,7 @@ class _HomecategoriesTailState extends State<HomecategoriesTail> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.085,
+      height: 65,
       child: ListView.builder(
         itemCount: label.length,
         scrollDirection: Axis.horizontal,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:masterpes_app/config/app_color_themes.dart';
 import 'package:masterpes_app/config/app_text_styles.dart';
 import 'package:masterpes_app/widgets/homecategories_tail.dart';
+import 'package:slide_countdown/slide_countdown.dart';
 
 class Bets extends StatelessWidget {
   const new({super.key});
@@ -27,21 +28,19 @@ class Bets extends StatelessWidget {
                     margin: EdgeInsets.all(12),
                     padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      color: AppColorThemes().smallcontainers,
+                      color: AppColorThemes().containers,
                       borderRadius: BorderRadius.circular(18),
                     ),
                     child: Column(
-                      spacing: 26,
+                      spacing: 16,
                       children: [
                         Row(
                           spacing: 20,
                           children: [
                             ClipOval(
                               child: Image.asset(
-                                height:
-                                    MediaQuery.of(context).size.height * 0.08,
-                                width:
-                                    MediaQuery.of(context).size.width * 0.178,
+                                height: 75,
+                                width: 75,
                                 fit: BoxFit.cover,
                                 "images/images.jpg",
                               ),
@@ -72,24 +71,41 @@ class Bets extends StatelessWidget {
                             ),
                           ],
                         ),
-                        Container(
-                          height: MediaQuery.of(context).size.height * 0.06,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(16),
-                            color: AppColorThemes().buttonColor,
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            spacing: 10,
-                            children: [
-                              Text(
-                                "Copy Code",
-                                style: AppTextStyles().appFonts,
+                        Row(
+                          children: [
+                            Container(
+                              alignment: Alignment.bottomRight,
+                              child: Transform.scale(
+                                scale: 1.2,
+                                child: SlideCountdown(
+                                  decoration: BoxDecoration(
+                                    color: Colors.black.withAlpha(60),
+                                    borderRadius: BorderRadius.circular(16),
+                                  ),
+                                  duration: Duration(hours: 3),
+                                ),
                               ),
-                              Icon(Icons.copy_rounded),
-                            ],
-                          ),
+                            ),
+                            Container(
+                              height: MediaQuery.of(context).size.height * 0.06,
+                              // width: double.infinity,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(16),
+                                color: AppColorThemes().buttonColor,
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                spacing: 10,
+                                children: [
+                                  Text(
+                                    "Copy Code",
+                                    style: AppTextStyles().appFonts,
+                                  ),
+                                  Icon(Icons.copy_rounded),
+                                ],
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
