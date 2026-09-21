@@ -18,7 +18,7 @@ class HomeCategories extends StatelessWidget {
         margin: EdgeInsets.all(8),
         padding: EdgeInsets.all(10),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(18),
           color: AppColorThemes().containers,
         ),
         child: Text(label, style: AppTextStyles().appFontsLabelsWhite),

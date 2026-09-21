@@ -90,7 +90,7 @@ class Home extends StatelessWidget {
                 },
               ),
 
-              BetcategoriesTail(),
+              // BetcategoriesTail(),
             ],
           ),
         ),

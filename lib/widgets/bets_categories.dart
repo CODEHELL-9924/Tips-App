@@ -65,7 +65,6 @@ class BetsCategories extends StatelessWidget {
 
             InkWell(
               onTap: () {
-                print("Tapped");
               },
               child: Container(
                 width: double.infinity,

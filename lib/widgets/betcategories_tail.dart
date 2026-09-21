@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:masterpes_app/widgets/bets_categories.dart';
 
 class BetcategoriesTail extends StatefulWidget {
-  const new({super.key});
+  const BetcategoriesTail({super.key});
 
   @override
   State<BetcategoriesTail> createState() => _BetcategoriesTailState();
@@ -18,16 +18,12 @@ class _BetcategoriesTailState extends State<BetcategoriesTail> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 200,
+      height: 100,
       child: ListView.builder(
         itemCount: tittle.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          return BetsCategories(
-            tittle: tittle[index],
-            bookingCodes: bookingCodes[index],
-            odds: odds[index],
-          );
+          return BetsCategories(tittle: tittle[index], bookingCodes: bookingCodes[index], odds: odds[index]);
         },
       ),
     );
